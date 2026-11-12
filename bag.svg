@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Sac de padel noir"><rect width="400" height="300" fill="#242117"/>
+<path d="M140 90C140 30 260 30 260 90" fill="none" stroke="#d7b56d" stroke-width="10" stroke-linecap="round"/>
+<rect x="70" y="85" width="260" height="150" rx="34" fill="#0d0d0d" stroke="#d7b56d" stroke-width="4"/>
+<path d="M80 120H320" stroke="#d7b56d" stroke-width="3" stroke-dasharray="6 6"/>
+<rect x="150" y="150" width="100" height="62" rx="12" fill="#17150f" stroke="#d7b56d" stroke-width="2"/>
+<text x="200" y="188" text-anchor="middle" font-family="Georgia,serif" font-size="32" font-weight="bold" fill="#d7b56d">PA</text>
+<rect x="318" y="140" width="40" height="80" rx="12" fill="#14120d" stroke="#d7b56d" stroke-width="3"/></svg>

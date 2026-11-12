@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Padel Avenue | Premium Store</title>
+  <meta name="description" content="Padel Avenue : raquettes, balles, sacs et chaussures de padel. Projet académique fictif.">
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTIiIGZpbGw9IiMxMDEwMTAiLz48dGV4dCB4PSIzMiIgeT0iNDMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iI2Q3YjU2ZCI+UEE8L3RleHQ+PC9zdmc+Cg==" type="image/svg+xml">
+  <style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#101010;color:#f7f2e8;font-family:Arial,sans-serif}
+header{padding:22px 7%;display:flex;justify-content:space-between;align-items:center;gap:18px;border-bottom:1px solid #373020}
+.logo{color:#d7b56d;font-size:23px;font-weight:bold;letter-spacing:2px;text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:18px}
+nav a{color:white;text-decoration:none;font-size:14px}
+nav a:hover{color:#d7b56d}
+.hero{min-height:400px;padding:75px 7%;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(ellipse at 80% 40%,#594522 0%,transparent 35%),linear-gradient(120deg,#171717,#080808)}
+.tag{color:#d7b56d;letter-spacing:3px;font-size:12px;margin-bottom:20px}
+h1{font-size:clamp(38px,7vw,70px);line-height:1.1;max-width:650px}
+h1 span,h2 span,.about-content h2 span{color:#d7b56d}
+.hero p{color:#c5c0b6;margin:20px 0 28px;line-height:1.7}
+.btn{display:inline-block;background:#d7b56d;color:#111;padding:14px 24px;border:0;font-weight:bold;cursor:pointer;text-decoration:none;width:fit-content}
+.section{padding:55px 7%}
+.section-title{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:28px}
+h2{font-size:27px}
+.demo{font-size:11px;color:#d7b56d;border:1px solid #705d35;padding:7px 10px}
+.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.product{background:#1b1b1b;border:1px solid #302b20;padding:22px 17px;transition:.2s}
+.product:hover{border-color:#d7b56d;transform:translateY(-4px)}
+.product-icon{aspect-ratio:4/3;overflow:hidden;display:flex;justify-content:center;align-items:center;font-size:65px;background:#242117;margin-bottom:20px}
+.category{font-size:10px;color:#d7b56d;letter-spacing:2px;margin-bottom:10px}
+.product h3{font-size:16px;margin-bottom:12px}
+.price{color:#d7b56d;font-size:19px;margin-bottom:18px;font-weight:bold}
+.product button{width:100%;padding:11px 5px;background:transparent;border:1px solid #d7b56d;color:#d7b56d;cursor:pointer}
+.product button:hover{background:#d7b56d;color:#111}
+.brands{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px}
+.brand-card{min-height:145px;padding:20px 10px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:radial-gradient(ellipse at top,#49391d 0%,#191714 55%,#101010 100%);border:1px solid #705d35;transition:.25s}
+.brand-card:hover{border-color:#d7b56d;transform:translateY(-5px);box-shadow:0 8px 25px #d7b56d18}
+.brand-symbol{color:#d7b56d;font-size:38px;font-weight:bold;margin-bottom:8px;font-family:Georgia,serif}
+.brand-card h3{color:#f7f2e8;font-size:14px;letter-spacing:1px}
+.brand-card p{color:#aaa397;font-size:11px;margin-top:8px}
+.about{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:45px;background:linear-gradient(135deg,#151515,#211b11);border-top:1px solid #373020;border-bottom:1px solid #373020}
+.about-content h2{font-size:clamp(28px,4vw,42px);line-height:1.25;margin-bottom:20px}
+.about-content p{color:#c5c0b6;line-height:1.9;margin-bottom:25px;max-width:500px}
+.about-decoration{min-height:240px;border:1px solid #705d35;display:flex;flex-direction:column;justify-content:center;align-items:center;background:radial-gradient(ellipse,#49391d 0%,#171512 70%);text-align:center;padding:20px}
+.about-decoration span{color:#d7b56d;font-family:Georgia,serif;font-size:90px;font-weight:bold}
+.about-decoration p{letter-spacing:3px;font-size:12px}
+.gold-line{width:60px;height:2px;background:#d7b56d;margin:15px 0}
+.about-decoration small{color:#aaa397;font-size:10px;letter-spacing:1px}
+.cart{background:#1b1b1b;padding:25px;border:1px solid #4a3d25}
+#cart-items{margin:15px 0;line-height:2;color:#d5d0c6}
+.cart-line{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.remove-button{color:#d7b56d;background:transparent;border:0;cursor:pointer}
+.total{border-top:1px solid #403724;padding-top:16px;color:#d7b56d;font-size:21px;font-weight:bold}
+.checkout-button{margin-top:20px}
+.notice{color:#d7b56d;margin-top:12px;min-height:18px}
+footer{text-align:center;padding:25px;border-top:1px solid #373020;color:#a9a49a;font-size:12px;line-height:1.8}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.products{grid-template-columns:repeat(2,minmax(0,1fr))}.brands{grid-template-columns:repeat(2,minmax(0,1fr))}header{padding:18px 5%;flex-wrap:wrap}.hero{padding:60px 6%}.section{padding:40px 5%}.about{grid-template-columns:1fr;gap:25px}}
+@media(max-width:380px){.products,.brands{grid-template-columns:1fr}.logo{font-size:19px}nav a{font-size:12px}}
+
+.hero{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px}
+.hero-img{width:100%;height:auto;border:1px solid #705d35;box-shadow:0 20px 60px #0009}
+img{display:block;max-width:100%}.product-icon img{width:100%;height:100%;object-fit:cover}
+a:focus-visible,button:focus-visible{outline:2px solid #d7b56d;outline-offset:3px}
+.cart-line{padding:6px 0;border-bottom:1px solid #2c2719}.qty{display:flex;align-items:center;gap:8px}
+.qty button:not(.remove-button){width:28px;height:28px;background:transparent;border:1px solid #705d35;color:#d7b56d;cursor:pointer;font-size:16px}
+.qty button:not(.remove-button):hover{background:#d7b56d;color:#111}.remove-button{text-decoration:underline;font-size:13px}
+.checkout-button:disabled{opacity:.4;cursor:not-allowed}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+
+</style>
+  <script defer>
+// Panier Padel Avenue.
+// XAMPP : la commande est envoyée à php/save_order.php (MySQL).
+// GitHub Pages (pas de PHP) : repli automatique sur localStorage.
+(function () {
+  var CART_KEY = 'padel_cart', ORDERS_KEY = 'padel_orders';
+  var cart = load(CART_KEY, []);
+  var $ = function (id) { return document.getElementById(id); };
+
+  function load(key, fallback) {
+    try { return JSON.parse(localStorage.getItem(key)) || fallback; } catch (e) { return fallback; }
+  }
+  function save(key, value) {
+    try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {}
+  }
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function render() {
+    var box = $('cart-items'), count = 0, total = 0;
+    if (!cart.length) {
+      box.textContent = 'Votre panier est vide.';
+    } else {
+      box.innerHTML = cart.map(function (it, i) {
+        count += it.qty; total += it.qty * it.price;
+        return '<div class="cart-line"><span>' + esc(it.name) + ' — ' + it.price + ' DT</span>' +
+          '<span class="qty"><button data-act="minus" data-i="' + i + '" aria-label="Retirer une unité de ' + esc(it.name) + '">−</button>' +
+          '<strong>' + it.qty + '</strong>' +
+          '<button data-act="plus" data-i="' + i + '" aria-label="Ajouter une unité de ' + esc(it.name) + '">+</button>' +
+          '<button class="remove-button" data-act="remove" data-i="' + i + '">Supprimer</button></span></div>';
+      }).join('');
+    }
+    $('cart-count').textContent = count;
+    $('total').textContent = total;
+    $('checkout').disabled = !cart.length;
+    save(CART_KEY, cart);
+  }
+
+  document.addEventListener('click', function (e) {
+    var add = e.target.closest('.add-button');
+    if (add) {
+      var name = add.dataset.name, price = Number(add.dataset.price);
+      var found = cart.filter(function (it) { return it.name === name; })[0];
+      if (found) found.qty++; else cart.push({ name: name, price: price, qty: 1 });
+      $('cart-message').textContent = name + ' ajouté au panier.';
+      render();
+      return;
+    }
+    var btn = e.target.closest('[data-act]');
+    if (!btn) return;
+    var i = Number(btn.dataset.i);
+    if (btn.dataset.act === 'plus') cart[i].qty++;
+    if (btn.dataset.act === 'minus' && --cart[i].qty <= 0) cart.splice(i, 1);
+    if (btn.dataset.act === 'remove') cart.splice(i, 1);
+    render();
+  });
+
+  function finish(id, total, where) {
+    cart = [];
+    render();
+    $('cart-message').textContent = 'Commande n° ' + id + ' enregistrée ' + where + ' (simulation, total ' + total + ' DT). Aucun paiement réel.';
+  }
+
+  // Essaie d'abord PHP/MySQL (XAMPP). Sans serveur PHP (GitHub Pages), la commande reste dans le navigateur.
+  $('checkout').addEventListener('click', function () {
+    if (!cart.length) return;
+    var btn = $('checkout');
+    btn.disabled = true;
+    fetch('php/save_order.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ items: cart })
+    }).then(function (r) {
+      return r.json().then(function (d) { return { ok: r.ok && d.ok, d: d }; });
+    }).then(function (res) {
+      if (!res.ok) throw new Error('php');
+      finish(res.d.order_id, res.d.total, 'dans MySQL');
+    }).catch(function () {
+      var orders = load(ORDERS_KEY, []);
+      var total = cart.reduce(function (s, it) { return s + it.qty * it.price; }, 0);
+      var id = orders.length + 1;
+      orders.push({ id: id, total: total, date: new Date().toISOString(), items: cart });
+      save(ORDERS_KEY, orders);
+      finish(id, total, 'dans le navigateur');
+    });
+  });
+
+  render();
+})();
+
+</script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="#home">PADEL AVENUE</a>
+    <nav>
+      <a href="#home">Accueil</a>
+      <a href="#shop">Collection</a>
+      <a href="#brands">Nos marques</a>
+      <a href="#apropos">À propos</a>
+      <a href="#panier">Panier (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <div class="tag">PERFORMANCE • STYLE • EXCELLENCE</div>
+      <h1>PLAY WITH <span>CLASS.</span></h1>
+      <p>Découvrez notre collection exclusive d'équipements de padel.<br>Le style premium rencontre la performance.</p>
+      <a href="#shop" class="btn">DÉCOUVRIR LA COLLECTION ↗</a>
+      </div>
+      <img class="hero-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NjAgNDIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkNvdXJ0IGRlIHBhZGVsIHZ1IGRlIGRlc3N1cyI+CjxkZWZzPjxyYWRpYWxHcmFkaWVudCBpZD0iZyIgY3g9IjUwJSIgY3k9IjQ1JSIgcj0iNjAlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM1YTQ1MjIiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNDEyMGQiLz48L3JhZGlhbEdyYWRpZW50Pgo8cmFkaWFsR3JhZGllbnQgaWQ9ImIiIGN4PSIzNSUiIGN5PSIzNSUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2Y0ZTNhZSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2M5YTI0YyIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iNTYwIiBoZWlnaHQ9IjQyMCIgcng9IjYiIGZpbGw9InVybCgjZykiLz4KPHJlY3QgeD0iNjAiIHk9IjQwIiB3aWR0aD0iNDQwIiBoZWlnaHQ9IjM0MCIgZmlsbD0iIzFkMWExMiIgc3Ryb2tlPSIjZDdiNTZkIiBzdHJva2Utd2lkdGg9IjQiLz4KPHJlY3QgeD0iNjAiIHk9IjQwIiB3aWR0aD0iNDQwIiBoZWlnaHQ9IjM0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjdmMmU4IiBzdHJva2Utb3BhY2l0eT0iLjI1IiBzdHJva2Utd2lkdGg9IjEyIi8+CjxnIHN0cm9rZT0iI2Q3YjU2ZCIgc3Ryb2tlLXdpZHRoPSIyLjUiIGZpbGw9Im5vbmUiPjxsaW5lIHgxPSIyODAiIHkxPSI0MCIgeDI9IjI4MCIgeTI9IjM4MCIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2U9IiNmN2YyZTgiLz48bGluZSB4MT0iMTQwIiB5MT0iNDAiIHgyPSIxNDAiIHkyPSIzODAiIHN0cm9rZS1vcGFjaXR5PSIwIi8+PGxpbmUgeDE9IjYwIiB5MT0iMTMwIiB4Mj0iNTAwIiB5Mj0iMTMwIi8+PGxpbmUgeDE9IjYwIiB5MT0iMjkwIiB4Mj0iNTAwIiB5Mj0iMjkwIi8+PGxpbmUgeDE9IjE3MCIgeTE9IjEzMCIgeDI9IjE3MCIgeTI9IjI5MCIgc3Ryb2tlLW9wYWNpdHk9IjAiLz48bGluZSB4MT0iNjAiIHkxPSIyMTAiIHgyPSI1MDAiIHkyPSIyMTAiIHN0cm9rZS1vcGFjaXR5PSIwIi8+PC9nPgo8ZyBzdHJva2U9IiNkN2I1NmQiIHN0cm9rZS13aWR0aD0iMi41Ij48bGluZSB4MT0iMTcwIiB5MT0iNDAiIHgyPSIxNzAiIHkyPSIzODAiIHN0cm9rZS1vcGFjaXR5PSIwIi8+PGxpbmUgeDE9IjI4MCIgeTE9IjEzMCIgeDI9IjI4MCIgeTI9IjI5MCIvPjwvZz4KPGcgc3Ryb2tlPSIjZjdmMmU4IiBzdHJva2Utb3BhY2l0eT0iLjA4IiBzdHJva2Utd2lkdGg9IjEiPjxwYXRoIGQ9Ik02MCA4MEg1MDBNNjAgMTIwSDUwME02MCAxNjBINTAwTTYwIDIwMEg1MDBNNjAgMjQwSDUwME02MCAyODBINTAwTTYwIDMyMEg1MDBNNjAgMzYwSDUwMCIvPjwvZz4KPGVsbGlwc2UgY3g9IjM4MCIgY3k9IjI1NiIgcng9IjIyIiByeT0iNyIgZmlsbD0iIzAwMCIgb3BhY2l0eT0iLjQiLz4KPGNpcmNsZSBjeD0iMzgwIiBjeT0iMjQ0IiByPSIxNSIgZmlsbD0idXJsKCNiKSIvPjxwYXRoIGQ9Ik0zNjcgMjM4YzggOCAxOCA4IDI2IDAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii43IiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiLz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTUwIDI1MCkgcm90YXRlKC0zNSkiPjxlbGxpcHNlIGN4PSIwIiBjeT0iLTQwIiByeD0iMzgiIHJ5PSI0OCIgZmlsbD0iIzExMSIgc3Ryb2tlPSIjZDdiNTZkIiBzdHJva2Utd2lkdGg9IjUiLz48ZyBmaWxsPSIjZDdiNTZkIiBvcGFjaXR5PSIuNyI+PGNpcmNsZSBjeD0iLTE0IiBjeT0iLTYwIiByPSIzIi8+PGNpcmNsZSBjeD0iMCIgY3k9Ii02MCIgcj0iMyIvPjxjaXJjbGUgY3g9IjE0IiBjeT0iLTYwIiByPSIzIi8+PGNpcmNsZSBjeD0iLTE0IiBjeT0iLTQ0IiByPSIzIi8+PGNpcmNsZSBjeD0iMCIgY3k9Ii00NCIgcj0iMyIvPjxjaXJjbGUgY3g9IjE0IiBjeT0iLTQ0IiByPSIzIi8+PGNpcmNsZSBjeD0iLTE0IiBjeT0iLTI4IiByPSIzIi8+PGNpcmNsZSBjeD0iMCIgY3k9Ii0yOCIgcj0iMyIvPjxjaXJjbGUgY3g9IjE0IiBjeT0iLTI4IiByPSIzIi8+PC9nPjxyZWN0IHg9Ii02IiB5PSI2IiB3aWR0aD0iMTIiIGhlaWdodD0iNDYiIHJ4PSI0IiBmaWxsPSIjZDdiNTZkIi8+PC9nPgo8L3N2Zz4K" alt="Court de padel vu de dessus avec une raquette et une balle">
+    </section>
+
+    <section class="section" id="shop">
+      <div class="section-title">
+        <h2>Notre <span>collection</span></h2>
+        <span class="demo">PROJET FICTIF</span>
+      </div>
+      <div class="products" id="products">
+        <article class="product">
+          <div class="product-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMzAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlJhcXVldHRlIGRlIHBhZGVsIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzI0MjExNyIvPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMDAgMTUwKSByb3RhdGUoMzUpIj48cmVjdCB4PSItOSIgeT0iNTUiIHdpZHRoPSIxOCIgaGVpZ2h0PSI4NSIgcng9IjYiIGZpbGw9IiNkN2I1NmQiLz48cmVjdCB4PSItMTAiIHk9Ijg1IiB3aWR0aD0iMjAiIGhlaWdodD0iNCIgZmlsbD0iIzExMSIvPjxyZWN0IHg9Ii0xMCIgeT0iMTAwIiB3aWR0aD0iMjAiIGhlaWdodD0iNCIgZmlsbD0iIzExMSIvPjxyZWN0IHg9Ii0xMCIgeT0iMTE1IiB3aWR0aD0iMjAiIGhlaWdodD0iNCIgZmlsbD0iIzExMSIvPgo8cGF0aCBkPSJNMCAtMTI1QzQ4IC0xMjUgNzAgLTkwIDcwIC01MEM3MCAtMTAgNDAgNTUgMCA1NUMtNDAgNTUgLTcwIC0xMCAtNzAgLTUwQy03MCAtOTAgLTQ4IC0xMjUgMCAtMTI1WiIgZmlsbD0iIzE0MTIwZCIgc3Ryb2tlPSIjZDdiNTZkIiBzdHJva2Utd2lkdGg9IjgiLz4KPGcgZmlsbD0iI2Q3YjU2ZCIgb3BhY2l0eT0iLjg1Ij48Y2lyY2xlIGN4PSIwIiBjeT0iLTk1IiByPSI0LjUiLz48Y2lyY2xlIGN4PSItMjIiIGN5PSItODAiIHI9IjQuNSIvPjxjaXJjbGUgY3g9IjIyIiBjeT0iLTgwIiByPSI0LjUiLz48Y2lyY2xlIGN4PSIwIiBjeT0iLTcwIiByPSI0LjUiLz48Y2lyY2xlIGN4PSItMzgiIGN5PSItNTUiIHI9IjQuNSIvPjxjaXJjbGUgY3g9Ii0xNCIgY3k9Ii01NSIgcj0iNC41Ii8+PGNpcmNsZSBjeD0iMTQiIGN5PSItNTUiIHI9IjQuNSIvPjxjaXJjbGUgY3g9IjM4IiBjeT0iLTU1IiByPSI0LjUiLz48Y2lyY2xlIGN4PSItMjYiIGN5PSItMzUiIHI9IjQuNSIvPjxjaXJjbGUgY3g9IjAiIGN5PSItMzgiIHI9IjQuNSIvPjxjaXJjbGUgY3g9IjI2IiBjeT0iLTM1IiByPSI0LjUiLz48Y2lyY2xlIGN4PSItMzgiIGN5PSItMTUiIHI9IjQuNSIvPjxjaXJjbGUgY3g9Ii0xNCIgY3k9Ii0xNSIgcj0iNC41Ii8+PGNpcmNsZSBjeD0iMTQiIGN5PSItMTUiIHI9IjQuNSIvPjxjaXJjbGUgY3g9IjM4IiBjeT0iLTE1IiByPSI0LjUiLz48Y2lyY2xlIGN4PSItMTgiIGN5PSI4IiByPSI0LjUiLz48Y2lyY2xlIGN4PSIwIiBjeT0iMTgiIHI9IjQuNSIvPjxjaXJjbGUgY3g9IjE4IiBjeT0iOCIgcj0iNC41Ii8+PC9nPjwvZz48L3N2Zz4K" alt="Raquette Elite Gold" loading="lazy"></div><div class="category">RAQUETTES</div>
+          <h3>Elite Gold</h3><div class="price">289 DT</div>
+          <button class="add-button" data-name="Elite Gold" data-price="289">Ajouter au panier +</button>
+        </article>
+        <article class="product">
+          <div class="product-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMzAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkJhbGxlcyBkZSBwYWRlbCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9IiMyNDIxMTciLz4KPGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJiIiBjeD0iMzUlIiBjeT0iMzAlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmN2U4YjQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNjNDliNDMiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz4KPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjI0NSIgcng9IjE1MCIgcnk9IjE0IiBmaWxsPSIjMDAwIiBvcGFjaXR5PSIuMzUiLz4KPGcgaWQ9InMiPjxjaXJjbGUgY3g9IjEzMCIgY3k9IjE3MCIgcj0iNjAiIGZpbGw9InVybCgjYikiLz48cGF0aCBkPSJNODAgMTQwQzExMCAxNzUgMTUwIDE3NSAxODAgMTQwTTg0IDIwNUMxMTUgMTcwIDE1MCAxNzAgMTc4IDIwMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utb3BhY2l0eT0iLjg1IiBzdHJva2Utd2lkdGg9IjUiLz48L2c+Cjx1c2UgaHJlZj0iI3MiIHg9IjE0MCIgeT0iMCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEzNSAtNTUpIj48Y2lyY2xlIGN4PSIxMzAiIGN5PSIxNzAiIHI9IjYwIiBmaWxsPSJ1cmwoI2IpIi8+PHBhdGggZD0iTTgwIDE0MEMxMTAgMTc1IDE1MCAxNzUgMTgwIDE0ME04NCAyMDVDMTE1IDE3MCAxNTAgMTcwIDE3OCAyMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii44NSIgc3Ryb2tlLXdpZHRoPSI1Ii8+PC9nPjwvc3ZnPgo=" alt="Balles Premium Balls" loading="lazy"></div><div class="category">BALLES</div>
+          <h3>Premium Balls</h3><div class="price">25 DT</div>
+          <button class="add-button" data-name="Premium Balls" data-price="25">Ajouter au panier +</button>
+        </article>
+        <article class="product">
+          <div class="product-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMzAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlNhYyBkZSBwYWRlbCBub2lyIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzI0MjExNyIvPgo8cGF0aCBkPSJNMTQwIDkwQzE0MCAzMCAyNjAgMzAgMjYwIDkwIiBmaWxsPSJub25lIiBzdHJva2U9IiNkN2I1NmQiIHN0cm9rZS13aWR0aD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8cmVjdCB4PSI3MCIgeT0iODUiIHdpZHRoPSIyNjAiIGhlaWdodD0iMTUwIiByeD0iMzQiIGZpbGw9IiMwZDBkMGQiIHN0cm9rZT0iI2Q3YjU2ZCIgc3Ryb2tlLXdpZHRoPSI0Ii8+CjxwYXRoIGQ9Ik04MCAxMjBIMzIwIiBzdHJva2U9IiNkN2I1NmQiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWRhc2hhcnJheT0iNiA2Ii8+CjxyZWN0IHg9IjE1MCIgeT0iMTUwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjYyIiByeD0iMTIiIGZpbGw9IiMxNzE1MGYiIHN0cm9rZT0iI2Q3YjU2ZCIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIzMiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNkN2I1NmQiPlBBPC90ZXh0Pgo8cmVjdCB4PSIzMTgiIHk9IjE0MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjgwIiByeD0iMTIiIGZpbGw9IiMxNDEyMGQiIHN0cm9rZT0iI2Q3YjU2ZCIgc3Ryb2tlLXdpZHRoPSIzIi8+PC9zdmc+Cg==" alt="Sac Black Edition" loading="lazy"></div><div class="category">SACS</div>
+          <h3>Black Edition</h3><div class="price">119 DT</div>
+          <button class="add-button" data-name="Black Edition" data-price="119">Ajouter au panier +</button>
+        </article>
+        <article class="product">
+          <div class="product-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMzAwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkNoYXVzc3VyZSBkZSBwYWRlbCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9IiMyNDIxMTciLz4KPGVsbGlwc2UgY3g9IjIwMCIgY3k9IjI0MCIgcng9IjE1MCIgcnk9IjEwIiBmaWxsPSIjMDAwIiBvcGFjaXR5PSIuMzUiLz4KPHBhdGggZD0iTTYwIDIwNVYxNTBDNjAgMTM1IDcwIDEyNSA4NSAxMjVIMTI1QzE0MCAxMjUgMTUwIDEzNSAxNjUgMTQwTDIxNSAxNTBDMjQwIDE1NSAyNzUgMTY1IDMwNSAxODBDMzM1IDE5MyAzNDUgMjAwIDM0NSAyMTRWMjIySDYwWiIgZmlsbD0iIzBkMGQwZCIgc3Ryb2tlPSIjZDdiNTZkIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTYwIDIwNUgzNDVWMjI4QzM0NSAyMzMgMzQwIDIzNiAzMzUgMjM2SDcwQzY0IDIzNiA2MCAyMzIgNjAgMjI3WiIgZmlsbD0iI2Q3YjU2ZCIvPgo8cGF0aCBkPSJNMTY1IDE0MEwxOTAgMTE4TTE5MCAxNTBMMjE1IDEyOE0yMTUgMTU4TDI0MCAxMzgiIHN0cm9rZT0iI2Q3YjU2ZCIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHBhdGggZD0iTTk1IDE1MEMxMjAgMTcwIDE2MCAxNzggMjE1IDE4NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZDdiNTZkIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9Ii43Ii8+PC9zdmc+Cg==" alt="Chaussures Court Pro" loading="lazy"></div><div class="category">CHAUSSURES</div>
+          <h3>Court Pro</h3><div class="price">199 DT</div>
+          <button class="add-button" data-name="Court Pro" data-price="199">Ajouter au panier +</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="brands">
+      <div class="section-title"><h2>Nos <span>marques</span></h2></div>
+      <div class="brands">
+        <div class="brand-card"><span class="brand-symbol">A</span><h3>ADIDAS PADEL</h3><p>Style & dynamisme</p></div>
+        <div class="brand-card"><span class="brand-symbol">N</span><h3>NOX</h3><p>Contrôle & excellence</p></div>
+        <div class="brand-card"><span class="brand-symbol">W</span><h3>WILSON</h3><p>Tradition & performance</p></div>
+        <div class="brand-card"><span class="brand-symbol">B</span><h3>BULLPADEL</h3><p>Puissance & précision</p></div>
+        <div class="brand-card"><span class="brand-symbol">H</span><h3>HEAD</h3><p>Innovation & qualité</p></div>
+      </div>
+    </section>
+
+    <section class="section about" id="apropos">
+      <div class="about-content">
+        <div class="tag">NOTRE UNIVERS • PADEL AVENUE</div>
+        <h2>Plus qu'un sport,<br><span>un art de vivre.</span></h2>
+        <p>Padel Avenue est un concept fictif dédié aux passionnés de padel, où l'élégance rencontre la performance. Découvrez un univers inspiré par le sport, le style et l'excellence.</p>
+        <a href="#shop" class="btn">EXPLORER LA COLLECTION ↗</a>
+      </div>
+      <div class="about-decoration"><span>PA</span><p>PLAY WITH CLASS.</p><div class="gold-line"></div><small>EST. 2026 • PROJET ACADÉMIQUE</small></div>
+    </section>
+
+    <section class="section" id="panier">
+      <div class="section-title"><h2>Votre <span>panier</span></h2><span class="demo">DÉMONSTRATION</span></div>
+      <div class="cart">
+        <p>Vos articles sélectionnés :</p>
+        <div id="cart-items">Votre panier est vide.</div>
+        <div class="total">Total : <span id="total">0</span> DT</div>
+        <button class="btn checkout-button" id="checkout">Enregistrer la commande (simulation)</button>
+        <p class="notice" id="cart-message" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>PADEL AVENUE © 2026 — Tous droits réservés.</p>
+    <p>Projet académique fictif — Aucun achat réel.</p>
+  </footer>
+</body>
+</html>

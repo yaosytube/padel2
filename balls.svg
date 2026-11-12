@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Balles de padel"><rect width="400" height="300" fill="#242117"/>
+<defs><radialGradient id="b" cx="35%" cy="30%"><stop offset="0" stop-color="#f7e8b4"/><stop offset="1" stop-color="#c49b43"/></radialGradient></defs>
+<ellipse cx="200" cy="245" rx="150" ry="14" fill="#000" opacity=".35"/>
+<g id="s"><circle cx="130" cy="170" r="60" fill="url(#b)"/><path d="M80 140C110 175 150 175 180 140M84 205C115 170 150 170 178 200" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="5"/></g>
+<use href="#s" x="140" y="0"/><g transform="translate(135 -55)"><circle cx="130" cy="170" r="60" fill="url(#b)"/><path d="M80 140C110 175 150 175 180 140M84 205C115 170 150 170 178 200" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="5"/></g></svg>

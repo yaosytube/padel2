@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Chaussure de padel"><rect width="400" height="300" fill="#242117"/>
+<ellipse cx="200" cy="240" rx="150" ry="10" fill="#000" opacity=".35"/>
+<path d="M60 205V150C60 135 70 125 85 125H125C140 125 150 135 165 140L215 150C240 155 275 165 305 180C335 193 345 200 345 214V222H60Z" fill="#0d0d0d" stroke="#d7b56d" stroke-width="4" stroke-linejoin="round"/>
+<path d="M60 205H345V228C345 233 340 236 335 236H70C64 236 60 232 60 227Z" fill="#d7b56d"/>
+<path d="M165 140L190 118M190 150L215 128M215 158L240 138" stroke="#d7b56d" stroke-width="6" stroke-linecap="round"/>
+<path d="M95 150C120 170 160 178 215 185" fill="none" stroke="#d7b56d" stroke-width="3" opacity=".7"/></svg>
